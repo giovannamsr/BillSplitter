@@ -2,7 +2,7 @@
 //  BillSplitterTests.swift
 //  BillSplitterTests
 //
-//  Created by Marcelo Rodrigues de Sousa on 16/09/21.
+//  Created by Giovanna Rodrigues on 16/09/21.
 //
 
 import XCTest
