@@ -19,6 +19,7 @@ class CalculatorViewController: UIViewController {
     var splitValue = 1
     var totalPerPerson : Float = 0.0
     var billTotal : Float = 0.0
+    var tip : Float = 0.0
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -42,15 +43,26 @@ class CalculatorViewController: UIViewController {
     @IBAction func calculatePressed(_ sender: UIButton) {
         billTotal = Float(billTotalText.text ?? "0.0") ?? 0.0
         if tenTipButton.isSelected == true{
-            billTotal = billTotal + 0.1*billTotal
+            tip = 0.1
         }
         else if twentyTipButton.isSelected == true{
-            billTotal = billTotal + 0.2*billTotal
-    
+            tip = 0.2
         }
+        else{
+            tip = 0.0
+        }
+        billTotal = billTotal + tip*billTotal
         totalPerPerson = billTotal/Float(splitValue)
-        print(totalPerPerson)
+        self.performSegue(withIdentifier: "goToResultView", sender: self)
     
+    }
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "goToResultView"{
+            let destinationVC = segue.destination as! ResultViewController
+            destinationVC.result = totalPerPerson
+            destinationVC.splitNumber = splitValue
+            destinationVC.tipNumber = Int(tip*100)
+        }
     }
 }
 

@@ -9,16 +9,22 @@ import UIKit
 
 class ResultViewController: UIViewController {
 
-    @IBOutlet weak var numberResultLabel: UIButton!
+
+
+    @IBOutlet weak var resultLabel: UILabel!
     @IBOutlet weak var detailResultLabel: UILabel!
+    var result : Float?
+    var splitNumber : Int?
+    var tipNumber : Int?
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+        let resultString = String(format: "%.2f", result ?? 0.0)
+        resultLabel.text = resultString
+        detailResultLabel.text = "Split between \(splitNumber ?? 0) people, with \(tipNumber ?? 0)% tip"
     }
-    
     @IBAction func recalculatePressed(_ sender: UIButton) {
+        self.dismiss(animated: true, completion: nil)
     }
     
     /*
