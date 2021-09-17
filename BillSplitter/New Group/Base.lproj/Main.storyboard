@@ -26,7 +26,6 @@
                                     </label>
                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="e.g. 123.56" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="zw1-cG-dbQ">
                                         <rect key="frame" x="0.0" y="68" width="178" height="54"/>
-                                        <color key="backgroundColor" red="0.83137254901960778" green="0.92549019607843142" blue="0.8666666666666667" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                         <color key="tintColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <color key="textColor" red="0.1209703907" green="0.35999029869999999" blue="0.39216816430000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                         <fontDescription key="fontDescription" type="boldSystem" pointSize="35"/>
@@ -43,7 +42,6 @@
                                         <subviews>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZuC-B5-m6l">
                                                 <rect key="frame" x="0.0" y="0.0" width="129.33333333333334" height="54"/>
-                                                <color key="backgroundColor" red="0.75294117650000003" green="0.84313725490000002" blue="0.79215686269999996" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="35"/>
                                                 <color key="tintColor" red="0.19810679549999999" green="0.35608613490000002" blue="0.38824570180000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                                 <state key="normal" title="0%">
@@ -55,7 +53,6 @@
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cDS-SG-GVG">
                                                 <rect key="frame" x="129.33333333333331" y="0.0" width="129.33333333333331" height="54"/>
-                                                <color key="backgroundColor" red="0.75232797600000001" green="0.8415731246" blue="0.79146187320000005" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="35"/>
                                                 <color key="tintColor" red="0.19810679549999999" green="0.35608613490000002" blue="0.38824570180000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                                 <state key="normal" title="10%">
@@ -67,7 +64,6 @@
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="crd-2Y-LPd">
                                                 <rect key="frame" x="258.66666666666669" y="0.0" width="129.33333333333331" height="54"/>
-                                                <color key="backgroundColor" red="0.75232797600000001" green="0.8415731246" blue="0.79146187320000005" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="35"/>
                                                 <color key="tintColor" red="0.19810679549999999" green="0.35608613490000002" blue="0.38824570180000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                                 <state key="normal" title="20%">
@@ -78,7 +74,6 @@
                                                 </connections>
                                             </button>
                                         </subviews>
-                                        <color key="backgroundColor" red="0.75232797600000001" green="0.8415731246" blue="0.79146187320000005" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                     </stackView>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Choose split" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Wv2-Sk-neZ">
                                         <rect key="frame" x="0.0" y="288.66666666666669" width="123.33333333333333" height="54"/>
