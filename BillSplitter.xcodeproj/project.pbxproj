@@ -9,12 +9,13 @@
 /* Begin PBXBuildFile section */
 		9C30947526F3E8FA00CF07D8 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C30947426F3E8FA00CF07D8 /* AppDelegate.swift */; };
 		9C30947726F3E8FA00CF07D8 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C30947626F3E8FA00CF07D8 /* SceneDelegate.swift */; };
-		9C30947926F3E8FA00CF07D8 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C30947826F3E8FA00CF07D8 /* ViewController.swift */; };
+		9C30947926F3E8FA00CF07D8 /* CalculatorViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C30947826F3E8FA00CF07D8 /* CalculatorViewController.swift */; };
 		9C30947C26F3E8FA00CF07D8 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9C30947A26F3E8FA00CF07D8 /* Main.storyboard */; };
 		9C30947E26F3E8FD00CF07D8 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9C30947D26F3E8FD00CF07D8 /* Assets.xcassets */; };
 		9C30948126F3E8FD00CF07D8 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9C30947F26F3E8FD00CF07D8 /* LaunchScreen.storyboard */; };
 		9C30948C26F3E8FD00CF07D8 /* BillSplitterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C30948B26F3E8FD00CF07D8 /* BillSplitterTests.swift */; };
 		9C30949726F3E8FD00CF07D8 /* BillSplitterUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C30949626F3E8FD00CF07D8 /* BillSplitterUITests.swift */; };
+		9C3094A526F430F600CF07D8 /* ResultViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C3094A426F430F600CF07D8 /* ResultViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -38,7 +39,7 @@
 		9C30947126F3E8FA00CF07D8 /* BillSplitter.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BillSplitter.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9C30947426F3E8FA00CF07D8 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		9C30947626F3E8FA00CF07D8 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		9C30947826F3E8FA00CF07D8 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		9C30947826F3E8FA00CF07D8 /* CalculatorViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalculatorViewController.swift; sourceTree = "<group>"; };
 		9C30947B26F3E8FA00CF07D8 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		9C30947D26F3E8FD00CF07D8 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		9C30948026F3E8FD00CF07D8 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -49,6 +50,7 @@
 		9C30949226F3E8FD00CF07D8 /* BillSplitterUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BillSplitterUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		9C30949626F3E8FD00CF07D8 /* BillSplitterUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BillSplitterUITests.swift; sourceTree = "<group>"; };
 		9C30949826F3E8FD00CF07D8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		9C3094A426F430F600CF07D8 /* ResultViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -101,11 +103,12 @@
 			children = (
 				9C30947426F3E8FA00CF07D8 /* AppDelegate.swift */,
 				9C30947626F3E8FA00CF07D8 /* SceneDelegate.swift */,
-				9C30947826F3E8FA00CF07D8 /* ViewController.swift */,
+				9C30947826F3E8FA00CF07D8 /* CalculatorViewController.swift */,
 				9C30947A26F3E8FA00CF07D8 /* Main.storyboard */,
 				9C30947D26F3E8FD00CF07D8 /* Assets.xcassets */,
 				9C30947F26F3E8FD00CF07D8 /* LaunchScreen.storyboard */,
 				9C30948226F3E8FD00CF07D8 /* Info.plist */,
+				9C3094A426F430F600CF07D8 /* ResultViewController.swift */,
 			);
 			path = BillSplitter;
 			sourceTree = "<group>";
@@ -258,9 +261,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				9C30947926F3E8FA00CF07D8 /* ViewController.swift in Sources */,
+				9C30947926F3E8FA00CF07D8 /* CalculatorViewController.swift in Sources */,
 				9C30947526F3E8FA00CF07D8 /* AppDelegate.swift in Sources */,
 				9C30947726F3E8FA00CF07D8 /* SceneDelegate.swift in Sources */,
+				9C3094A526F430F600CF07D8 /* ResultViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

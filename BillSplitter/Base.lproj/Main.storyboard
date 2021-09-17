@@ -7,10 +7,10 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Calculator View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="BillSplitter" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="CalculatorViewController" customModule="BillSplitter" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="428" height="926"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -41,27 +41,39 @@
                                         <subviews>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZuC-B5-m6l">
                                                 <rect key="frame" x="0.0" y="0.0" width="129.33333333333334" height="54"/>
-                                                <color key="backgroundColor" red="0.20392156862745098" green="0.35686274509803922" blue="0.38823529411764707" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <color key="backgroundColor" red="0.75294117650000003" green="0.84313725490000002" blue="0.79215686269999996" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="35"/>
+                                                <color key="tintColor" red="0.19810679549999999" green="0.35608613490000002" blue="0.38824570180000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                                 <state key="normal" title="0%">
-                                                    <color key="titleColor" red="0.83137254900000002" green="0.92549019610000005" blue="0.86666666670000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                    <color key="titleColor" red="0.19810679549999999" green="0.35608613490000002" blue="0.38824570180000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                                 </state>
+                                                <connections>
+                                                    <action selector="tipButtonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Jni-4x-reM"/>
+                                                </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cDS-SG-GVG">
                                                 <rect key="frame" x="129.33333333333331" y="0.0" width="129.33333333333331" height="54"/>
                                                 <color key="backgroundColor" red="0.75232797600000001" green="0.8415731246" blue="0.79146187320000005" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="35"/>
+                                                <color key="tintColor" red="0.19810679549999999" green="0.35608613490000002" blue="0.38824570180000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                                 <state key="normal" title="10%">
                                                     <color key="titleColor" red="0.20392156859999999" green="0.35686274509999999" blue="0.38823529410000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 </state>
+                                                <connections>
+                                                    <action selector="tipButtonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="VvL-IM-xbP"/>
+                                                </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="crd-2Y-LPd">
                                                 <rect key="frame" x="258.66666666666669" y="0.0" width="129.33333333333331" height="54"/>
                                                 <color key="backgroundColor" red="0.75232797600000001" green="0.8415731246" blue="0.79146187320000005" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="35"/>
+                                                <color key="tintColor" red="0.19810679549999999" green="0.35608613490000002" blue="0.38824570180000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                                 <state key="normal" title="20%">
                                                     <color key="titleColor" red="0.20392156859999999" green="0.35686274509999999" blue="0.38823529410000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 </state>
+                                                <connections>
+                                                    <action selector="tipButtonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="lRO-Qb-pKY"/>
+                                                </connections>
                                             </button>
                                         </subviews>
                                         <color key="backgroundColor" red="0.75232797600000001" green="0.8415731246" blue="0.79146187320000005" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
@@ -95,6 +107,9 @@
                                     </label>
                                     <stepper opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" maximumValue="100" translatesAutoresizingMaskIntoConstraints="NO" id="csd-Cc-LLO">
                                         <rect key="frame" x="39.333333333333314" y="0.0" width="94" height="32"/>
+                                        <connections>
+                                            <action selector="stepperPressed:" destination="BYZ-38-t0r" eventType="valueChanged" id="eEo-Um-oaC"/>
+                                        </connections>
                                     </stepper>
                                 </subviews>
                                 <constraints>
@@ -112,6 +127,10 @@
                                 <state key="normal" title="CALCULATE">
                                     <color key="titleColor" red="0.82745098039215681" green="0.92549019607843142" blue="0.8666666666666667" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 </state>
+                                <connections>
+                                    <action selector="calculatePressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="3hv-qb-g4S"/>
+                                    <action selector="tipButtonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="P2o-ys-57T"/>
+                                </connections>
                             </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
@@ -131,27 +150,36 @@
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="shi-GB-SyE" secondAttribute="bottom" constant="10" id="uka-pc-UjI"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="billTotalLabel" destination="I9p-l6-9fl" id="JKv-bi-uBG"/>
+                        <outlet property="calculateButton" destination="shi-GB-SyE" id="Hf1-g8-hbg"/>
+                        <outlet property="splitLabel" destination="YJp-NM-QhB" id="XkU-6w-smj"/>
+                        <outlet property="tenTipButton" destination="cDS-SG-GVG" id="6Oh-xB-jdW"/>
+                        <outlet property="twentyTipButton" destination="crd-2Y-LPd" id="afY-hD-ZEr"/>
+                        <outlet property="zeroTipButton" destination="ZuC-B5-m6l" id="77S-7y-SmI"/>
+                        <segue destination="Ltz-nN-dit" kind="presentation" id="ktH-6C-jNE"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="121.73913043478262" y="112.5"/>
         </scene>
-        <!--View Controller-->
+        <!--Result View Controller-->
         <scene sceneID="Xeb-f9-Kk2">
             <objects>
-                <viewController id="Ltz-nN-dit" sceneMemberID="viewController">
+                <viewController id="Ltz-nN-dit" customClass="ResultViewController" customModule="BillSplitter" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="JPC-dR-hqB">
-                        <rect key="frame" x="0.0" y="0.0" width="428" height="926"/>
+                        <rect key="frame" x="0.0" y="0.0" width="428" height="872"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="topBackground" translatesAutoresizingMaskIntoConstraints="NO" id="Sty-UL-5xj">
-                                <rect key="frame" x="0.0" y="816" width="428" height="76"/>
+                                <rect key="frame" x="0.0" y="762" width="428" height="76"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="76" id="kHt-nc-SuL"/>
                                 </constraints>
                             </imageView>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="38" translatesAutoresizingMaskIntoConstraints="NO" id="Rpf-kA-cdn">
-                                <rect key="frame" x="20" y="100.00000000000001" width="388" height="195.33333333333337"/>
+                                <rect key="frame" x="20" y="56.000000000000014" width="388" height="195.33333333333337"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Total per person" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Qgy-vR-2vu">
                                         <rect key="frame" x="0.0" y="0.0" width="159.33333333333334" height="27.666666666666668"/>
@@ -160,7 +188,7 @@
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7aV-vN-Min">
-                                        <rect key="frame" x="0.0" y="65.666666666666657" width="388" height="64"/>
+                                        <rect key="frame" x="0.0" y="65.666666666666671" width="388" height="64.000000000000014"/>
                                         <color key="backgroundColor" red="0.75232797600000001" green="0.8415731246" blue="0.79146187320000005" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                         <fontDescription key="fontDescription" type="boldSystem" pointSize="43"/>
                                         <state key="normal" title="56.32">
@@ -168,7 +196,7 @@
                                         </state>
                                     </button>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Split between 2 people, with 10% tip." textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LyJ-1D-HTh">
-                                        <rect key="frame" x="0.0" y="167.66666666666669" width="362.33333333333331" height="27.666666666666657"/>
+                                        <rect key="frame" x="0.0" y="167.66666666666666" width="362.33333333333331" height="27.666666666666657"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="23"/>
                                         <color key="textColor" red="0.20392156859999999" green="0.35686274509999999" blue="0.38823529410000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <nil key="highlightedColor"/>
@@ -180,7 +208,7 @@
                                 </constraints>
                             </stackView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="365-FI-1oW">
-                                <rect key="frame" x="122" y="742" width="184" height="54"/>
+                                <rect key="frame" x="122" y="688" width="184" height="54"/>
                                 <color key="backgroundColor" red="0.20392156859999999" green="0.35686274509999999" blue="0.38823529410000002" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <constraints>
                                     <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="184" id="uje-V3-iLX"/>
@@ -190,6 +218,9 @@
                                 <state key="normal" title="RECALCULATE">
                                     <color key="titleColor" red="0.82745098039999998" green="0.92549019610000005" blue="0.86666666670000003" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 </state>
+                                <connections>
+                                    <action selector="recalculatePressed:" destination="Ltz-nN-dit" eventType="touchUpInside" id="bKQ-Pi-2mY"/>
+                                </connections>
                             </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="qVI-2T-w3L"/>
@@ -205,6 +236,10 @@
                             <constraint firstAttribute="trailingMargin" secondItem="Rpf-kA-cdn" secondAttribute="trailing" id="rMi-RL-HpH"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="detailResultLabel" destination="LyJ-1D-HTh" id="Gwj-KB-TeM"/>
+                        <outlet property="numberResultLabel" destination="7aV-vN-Min" id="zDo-SO-Pwo"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="cwL-aq-Whf" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
