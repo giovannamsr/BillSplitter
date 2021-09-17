@@ -16,15 +16,12 @@ class CalculatorViewController: UIViewController {
     @IBOutlet weak var calculateButton: UIButton!
     @IBOutlet weak var billTotalText: UITextField!
     
-    var splitValue = 1
-    var totalPerPerson : Float = 0.0
-    var billTotal : Float = 0.0
-    var tip : Float = 0.0
+    var calculatorBrain = CalculatorBrain()
     
     override func viewDidLoad() {
         super.viewDidLoad()
         zeroTipButton.isSelected = true
-        splitLabel.text = String(splitValue)
+        splitLabel.text = calculatorBrain.getSplitValue()
     }
 
     @IBAction func tipButtonTapped(_ sender: UIButton) {
@@ -37,31 +34,30 @@ class CalculatorViewController: UIViewController {
     }
     
     @IBAction func stepperPressed(_ sender: UIStepper) {
-        splitLabel.text = String(Int(sender.value))
-        splitValue = Int(sender.value)
+        calculatorBrain.setSplitValue(sender.value)
+        splitLabel.text = calculatorBrain.getSplitValue()
     }
     @IBAction func calculatePressed(_ sender: UIButton) {
-        billTotal = Float(billTotalText.text ?? "0.0") ?? 0.0
+        calculatorBrain.setBillTotal(billTotalText.text ?? "0.0")
         if tenTipButton.isSelected == true{
-            tip = 0.1
+            calculatorBrain.setTip(0.1)
         }
         else if twentyTipButton.isSelected == true{
-            tip = 0.2
+            calculatorBrain.setTip(0.2)
         }
         else{
-            tip = 0.0
+            calculatorBrain.setTip(0.0)
         }
-        billTotal = billTotal + tip*billTotal
-        totalPerPerson = billTotal/Float(splitValue)
+        calculatorBrain.calculateTotalPerPerson()
         self.performSegue(withIdentifier: "goToResultView", sender: self)
     
     }
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "goToResultView"{
             let destinationVC = segue.destination as! ResultViewController
-            destinationVC.result = totalPerPerson
-            destinationVC.splitNumber = splitValue
-            destinationVC.tipNumber = Int(tip*100)
+            destinationVC.calculatorBrain.totalPerPerson = calculatorBrain.totalPerPerson
+            destinationVC.calculatorBrain.split = calculatorBrain.split
+            destinationVC.calculatorBrain.tip = calculatorBrain.tip
         }
     }
 }
