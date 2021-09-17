@@ -103,12 +103,11 @@
 			children = (
 				9C30947426F3E8FA00CF07D8 /* AppDelegate.swift */,
 				9C30947626F3E8FA00CF07D8 /* SceneDelegate.swift */,
-				9C30947826F3E8FA00CF07D8 /* CalculatorViewController.swift */,
-				9C30947A26F3E8FA00CF07D8 /* Main.storyboard */,
+				9C3094A826F50FB200CF07D8 /* New Group */,
+				9C3094A626F50F3100CF07D8 /*  Controller */,
 				9C30947D26F3E8FD00CF07D8 /* Assets.xcassets */,
 				9C30947F26F3E8FD00CF07D8 /* LaunchScreen.storyboard */,
 				9C30948226F3E8FD00CF07D8 /* Info.plist */,
-				9C3094A426F430F600CF07D8 /* ResultViewController.swift */,
 			);
 			path = BillSplitter;
 			sourceTree = "<group>";
@@ -129,6 +128,23 @@
 				9C30949826F3E8FD00CF07D8 /* Info.plist */,
 			);
 			path = BillSplitterUITests;
+			sourceTree = "<group>";
+		};
+		9C3094A626F50F3100CF07D8 /*  Controller */ = {
+			isa = PBXGroup;
+			children = (
+				9C30947826F3E8FA00CF07D8 /* CalculatorViewController.swift */,
+				9C3094A426F430F600CF07D8 /* ResultViewController.swift */,
+			);
+			path = " Controller";
+			sourceTree = "<group>";
+		};
+		9C3094A826F50FB200CF07D8 /* New Group */ = {
+			isa = PBXGroup;
+			children = (
+				9C30947A26F3E8FA00CF07D8 /* Main.storyboard */,
+			);
+			path = "New Group";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
